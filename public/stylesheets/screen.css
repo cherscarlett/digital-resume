@@ -1,0 +1,491 @@
+/* line 17, /Library/Ruby/Gems/1.8/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 20, /Library/Ruby/Gems/1.8/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+}
+
+/* line 22, /Library/Ruby/Gems/1.8/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 24, /Library/Ruby/Gems/1.8/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 26, /Library/Ruby/Gems/1.8/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 28, /Library/Ruby/Gems/1.8/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 101, /Library/Ruby/Gems/1.8/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 30, /Library/Ruby/Gems/1.8/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 114, /Library/Ruby/Gems/1.8/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: "Friz";
+  src: url("/fonts/Friz Quadrata Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+/* line 6 */
+body {
+  background:black url("/images/body_bg.jpg") top center no-repeat;
+  color: white;
+  font-family:Helvetica, Symbol, Arial, sans-serif;
+}
+
+/* line 10 */
+.hidden {
+  display: none;
+}
+
+/* line 12 */
+h1, h2, h3 {
+  font-weight:normal;
+}
+
+/* line 15 */
+em {
+  font-style: italic;
+}
+
+/* line 17 */
+a {
+  text-decoration: none;
+}
+
+/* line 20 */
+.container {
+  overflow: hidden;
+  position: relative;
+  width: 994px;
+  height: 760px;
+  margin: 20px auto;
+  background:transparent url("/images/content_bg.png") top center no-repeat;
+  border-radius:12px 12px 0 0;
+  box-shadow:0 0 20px #000;
+}
+
+.resume-header {
+  margin:auto;
+  width:994px;
+  height:68px;
+  text-align:center;
+  background:transparent url("/images/header.png") 52.5% 60% no-repeat;
+  position:absolute;
+  z-index:10;
+}
+#character_summary {
+  background:transparent url("/images/character_summary_bg.png") top center no-repeat;
+  width: 994px;
+  height: 765px;
+  top:0;
+}
+.main_section {
+  opacity:0;
+  position:absolute;
+  z-index:8;
+  transition: all linear .5s;
+  -webkit-transition: all linear .5s;
+}
+.active {
+  opacity:1;
+  z-index:9;
+}
+
+#sidebar {
+  position:absolute;
+  z-index:11;
+  width:280px;
+  height:765px;
+  top:130px;
+  left:0;
+  padding-left:25px;
+}
+#sidebar h1 {
+  font-weight:bold;
+  font-size:56px;
+  float:left;
+  margin-right:10px;
+}
+#sidebar h2 {
+  font-size:14px;
+  padding-top:7px;
+}
+#sidebar h3 {
+  font-size:20px;
+  color:#14a6f1;
+  line-height:38px;
+}
+#sidebar h4 {
+  color:#74caf6;
+  font-size:14px;
+  line-height:18px;
+}
+#sidebar nav {
+  clear:both;
+  padding-top:55px;
+  width:155px;
+  border-bottom:1px solid rgba(116, 202, 246, .08);
+}
+p.its_over_9000 {
+  font-weight:bold;
+  font-size:20px;
+  background:transparent url("/images/achievement_points_icon.png") 0 3px no-repeat;
+  padding-left:15px;
+  margin-top:10px;
+}
+
+#sidebar nav a {
+  color: #1581ba;
+  font-size:14px;
+  height:28px;
+  line-height:28px;
+  display:block;
+  border-top:1px solid rgba(116, 202, 246, .08);
+  padding-left:5px;
+  transition: all linear .5s;
+  -webkit-transition: all linear .5s;
+}
+#sidebar nav a:hover {
+  background: linear-gradient(to right, rgba(5,35,49,0.63) 0%,rgba(25,101,131,0) 100%)
+}
+#sidebar nav li.current a {
+  color:#FFF;
+  font-weight:bold;
+  cursor:default;
+}
+#sidebar nav li.current a:hover {
+  background:none;
+}
+.main_content {
+  margin-left:290px;
+  margin-top:190px;
+}
+/* armory */
+.item_deets {
+  background:rgba(0, 11, 15, 0.73);
+  border:1px solid rgba(53, 55, 56, 0.47);
+  box-shadow:inset 0px 0px 21px rgba(0,0,0,.75);
+  padding:5px 10px 10px 10px;
+  font-size:11px;
+  line-height:14px;
+  width:250px;
+  position:absolute;
+  height:80px;
+  border-radius:2px;
+  opacity:0;
+  z-index:10;
+  transition: all linear .5s;
+  -webkit-transition: all linear .5s;
+  margin-left:-285px;
+  margin-top:-5px;
+}
+.item_title {
+  color:#c600ff;
+  font-weight:bold;
+  font-size:14px;
+  line-height:24px;
+}
+.item_season {
+  color:#09e505;
+}
+.item_level {
+  color:#ffce09;
+}
+.item_type {
+  font-size:11px;
+}
+span.type {
+  float:right;
+}
+
+.armor_slot {
+  position:relative;
+  height:46px;
+  width:46px;
+  border-radius:3px;
+  border:2px solid #8b29b0;
+  float:left;
+  cursor:pointer;
+  margin-bottom:10px;
+  z-index:8;
+  overflow:hidden;
+  transition: all linear .2s;
+  -webkit-transition: all linear .2s;
+  opacity:.9;
+  box-shadow:0 0 8px #000;
+}
+.armor_slot:hover {
+  overflow:visible;
+  opacity:1;
+}
+.armor_slot:hover .item_deets{
+  opacity:1;
+}
+.left_slot {
+  margin-right: 460px;
+}
+.left_slot .item_deets {
+  margin-left:55px;
+}
+.main_hand {
+  clear:left;
+  margin-left:230px;
+  margin-right:15px;
+}
+.trinket2 .item_deets, .bracers .item_deets {
+  margin-top:-60px;
+}
+.weapon .item_deets {
+  margin-top:-105px;
+  margin-left: -115px;
+}
+.helm {
+  background:url("/images/helm.png") top left no-repeat;
+}
+.neck {
+  background:url("/images/necklace.png") top left no-repeat;
+}
+.shoulder {
+  background:url("/images/shoulders.png") top left no-repeat;
+}
+.back {
+  background:url("/images/back.png") -1px -1px no-repeat;
+}
+.chest {
+  background:url("/images/chest.png") -1px -1px no-repeat;
+}
+.shirt {
+  background:url("/images/red_shirt_guy.png") top left no-repeat;
+}
+.tabard {
+  background:url("/images/tabard.png") top left no-repeat;
+}
+.bracers {
+  background: url("/images/bracers.png") top left no-repeat;
+}
+.gloves {
+  background: url("/images/gloves.png") top left no-repeat;
+}
+.waste {
+  background: url("/images/belt.png") top left no-repeat;
+}
+.legs {
+  background: url("/images/legs.png") top left no-repeat;
+}
+.feet {
+  background: url("/images/boots.png") top left no-repeat;
+}
+.ring {
+  background: url("/images/ring.png") top left no-repeat;
+}
+.trinket1 {
+  background: url("/images/trinket1.png") top left no-repeat;
+}
+
+.trinket2 {
+  background: url("/images/trinket2.png") top left no-repeat;
+}
+.weapon {
+  background: url("/images/weapon.png") top left no-repeat;
+}
+
+.main_content header h1 {
+  color:#14a6f1;
+  font-size:20px;
+}
+.main_content header h2 {
+  color:#FFF;
+  font-size:11px;
+}
+.talents_content, .resume_content {
+  margin-left:320px;
+  margin-top:180px;
+}
+.talents-list {
+  border:1px solid rgba(48, 67, 71, 0.47);
+  background:rgba(0, 0, 0, 0.71);
+  box-shadow:inset 0px 0px 10px rgba(0,0,0,.75);
+  width:535px;
+  height:350px;
+  margin:15px auto;
+  padding:15px;
+}
+.talent {
+  float:left;
+  width:162px;
+  height:43px;
+  border-radius:2px;
+  background:#0d4778;
+  border:1px solid #199de0;
+  margin:7px;
+  font-size:11px;
+  line-height:43px;
+}
+.expert {
+  box-shadow:inset 0px 0px 21px rgba(20, 166, 241, 0.50);
+}
+.proficient {
+  opacity:.5;
+}
+.working {
+  opacity: .25;
+}
+
+.talent span {
+  display:block;
+  height:35px;
+  width:35px;
+  border-radius:2px;
+  box-shadow:0 0 8px rgba(0,0,0, .81);
+  float:left;
+  margin:4px 10px 5px 5px;
+  background:url("/images/talents_sprite.png") top left no-repeat;
+}
+
+.talent .javascript {
+  background-position:-50px 0;
+}
+
+.talent .html5 {
+  background-position:-100px 0;
+}
+.talent .ruby {
+  background-position:0 -61px;
+}
+.talent .php {
+  background-position: -50px -61px;
+}
+.talent .ajax {
+  background-position: -100px -61px;
+}
+.talent .groovy {
+  background-position: 0 -122px;
+}
+.talent .jquery {
+  background-position: -50px -122px;
+}
+.talent .backbonejs {
+  background-position: -100px -122px;
+}
+.talent .python {
+  background-position: 0 -184px;
+}
+.talent .django {
+  background-position: -50px -184px;
+}
+.talent .hudson {
+  background-position: -100px -184px;
+}
+.talent .photoshop {
+  background-position: 0 -244px;
+}
+.talent .velocty {
+  background-position: -50px -244px;
+}
+.talent .mysql {
+  background-position: -100px -244px;
+}
+.talent .springsource {
+  background-position: 0 -304px;
+}
+.talent .subversion {
+  background-position: -50px -304px;
+}
+.talent .git {
+  background-position: -100px -304px;
+}
+small {
+  font-size:9px;
+  color:#5d8ea7;
+  float:right;
+}
+.resume_content ol {
+  margin-top:15px;
+  background:url("/images/resume_content_bg.png") top center no-repeat;
+  width:550px;
+  height:485px;
+  padding:15px;
+  box-shadow:0 0 5px #000;
+  overflow:hidden;
+}
+.resume_content ol li {
+  margin-top:15px;
+}
+.resume_content ol ul li {
+  margin-top:0;
+}
+.resume_content ol h2 {
+  text-transform:uppercase;
+  color:#14a6f1;
+  font-size:20px;
+  font-weight:bold;
+  border-right:3px solid #5598bc;
+  padding-right:10px;
+  margin-right:10px;
+  float:left;
+}
+.location {
+  font-size:12px;
+  line-height:20px;
+}
+.resume_content ol h3 {
+  clear: both;
+  color:#5599bf;
+  font-weight:normal;
+  font-size:12px;
+}
+p.timespan {
+  color:#14a6f1;
+  font-style:italic;
+  margin-top:20px;
+  font-size:14px;
+}
+.resume_content ol ul {
+  font-size:12px;
+  list-style-type: disc;
+  margin:15px 0 15px 15px;
+}
