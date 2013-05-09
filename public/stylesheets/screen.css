@@ -120,7 +120,7 @@ a {
 #character_summary {
   background:transparent url("/images/character_summary_bg.png") top center no-repeat;
   width: 994px;
-  height: 765px;
+  height: 760px;
   top:0;
 }
 .main_section {
@@ -139,7 +139,7 @@ a {
   position:absolute;
   z-index:11;
   width:280px;
-  height:765px;
+  height:760px;
   top:130px;
   left:0;
   padding-left:25px;
