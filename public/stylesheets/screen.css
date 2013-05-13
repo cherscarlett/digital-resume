@@ -220,7 +220,7 @@ p.its_over_9000 {
   z-index:10;
   transition: all linear .5s;
   -webkit-transition: all linear .5s;
-  margin-left:-285px;
+  margin-left:-290px;
   margin-top:-5px;
 }
 .item_title {
