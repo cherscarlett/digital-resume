@@ -456,7 +456,8 @@ small {
   margin-top:15px;
 }
 .resume_content ol ul li {
-  margin-top:0;
+  margin-top:5px;
+  line-height:15px;
 }
 .resume_content ol h2 {
   text-transform:uppercase;
@@ -467,6 +468,7 @@ small {
   padding-right:10px;
   margin-right:10px;
   float:left;
+  letter-spacing: 1px;
 }
 .location {
   font-size:12px;
