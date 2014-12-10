@@ -101,13 +101,23 @@ a {
   overflow: hidden;
   position: relative;
   width: 994px;
-  height: 760px;
+  height: 1060px;
   margin: 20px auto;
   background:transparent url("/images/content_bg.png") top center no-repeat;
   border-radius:12px 12px 0 0;
   box-shadow:0 0 20px #000;
 }
-
+.progression {
+  background:#000;
+  height:300px;
+  position:absolute;
+  bottom:1px;
+  right:0;
+  left:0;
+  z-index:10;
+  border-bottom:1px solid #001025;
+  padding:0 25px;
+}
 .resume-header {
   margin:auto;
   width:994px;
@@ -129,6 +139,7 @@ a {
   z-index:8;
   transition: all linear .5s;
   -webkit-transition: all linear .5s;
+  -moz-transition: all linear .5s;
 }
 .active {
   opacity:1;
@@ -137,7 +148,7 @@ a {
 
 #sidebar {
   position:absolute;
-  z-index:11;
+  z-index:10;
   width:280px;
   height:760px;
   top:130px;
@@ -188,6 +199,7 @@ p.its_over_9000 {
   padding-left:5px;
   transition: all linear .5s;
   -webkit-transition: all linear .5s;
+  -moz-transition: all linear .5s;
 }
 #sidebar nav a:hover {
   background: linear-gradient(to right, rgba(5,35,49,0.63) 0%,rgba(25,101,131,0) 100%)
@@ -220,6 +232,7 @@ p.its_over_9000 {
   z-index:10;
   transition: all linear .5s;
   -webkit-transition: all linear .5s;
+  -moz-transition: all linear .5s;
   margin-left:-290px;
   margin-top:-5px;
 }
@@ -251,10 +264,11 @@ span.type {
   float:left;
   cursor:pointer;
   margin-bottom:10px;
-  z-index:8;
+  z-index:11;
   overflow:hidden;
   transition: all linear .2s;
   -webkit-transition: all linear .2s;
+  -moz-transition: all linear .2s;
   opacity:.9;
   box-shadow:0 0 8px #000;
 }
@@ -333,9 +347,12 @@ span.type {
   background: url("/images/weapon.png") top left no-repeat;
 }
 
-.main_content header h1 {
-  color:#14a6f1;
+.main_content header h1, .progression h1 {
+  color:#fff;
   font-size:20px;
+}
+.progression h1 {
+  color:#14a6f1;
 }
 .main_content header h2 {
   color:#FFF;
@@ -490,4 +507,256 @@ p.timespan {
   font-size:12px;
   list-style-type: disc;
   margin:15px 0 15px 15px;
+}
+.progression h1 {
+  border-bottom: 2px solid #05344e;
+  padding-bottom:10px;
+}
+.link-to-armory {
+  position:absolute;
+  right:25px;
+  margin-top:-24px;
+  font-size:11px;
+  color:#5599bf;
+}
+.link-to-armory a, .link-to-armory a:link, .link-to-armory a:visited, .link-to-armory a:hover, .link-to-armory a:active {
+  color:#fff;
+}
+.list-of-games-container {
+  padding-top:40px;
+  overflow:hidden;
+  position: relative;
+}
+
+.game-type-container {
+  padding-left:110px;
+  width:1140px;
+  transition: all ease-in-out .3s;
+  -webkit-transition: all ease-in-out .3s;
+  -moz-transition: all ease-in-out .3s;
+}
+.descriptions {
+  position:absolute;
+  line-height: 20px;
+  background-color: #010d19;
+  padding-left: 20px;
+  font-weight: bold;
+  font-size: 11px;
+  top:123px;
+}
+.description {
+  width:90px;
+  height:20px;
+}
+.list-of-games-container h2 {
+  float:left;
+  font-size:11px;
+  color:#72a2ba;
+  text-transform: lowercase;
+  text-indent: 2px;
+}
+.rpg-heading {
+  width:597px;
+  margin-right:12px;
+}
+.moba-heading {
+  width:106px;
+  margin-right:11px;
+}
+.tcg-heading {
+  width:108px;
+  margin-right:7px;
+}
+.fps-heading {
+  width:291px;
+}
+.controls {
+  width:62px;
+  height:30px;
+  padding:28px 48px 26px 0;
+  position:absolute;
+  background:#000;
+  z-index: 12;
+}
+.controls > a {
+  height:30px;
+  width:26px;
+  background:#010d19 url("/images/arrows.png") no-repeat;
+  display:block;
+  float: left;
+  text-indent: -10000px;
+  border-radius: 3px;
+  transition: opacity linear .2s;
+  -webkit-transition: opacity linear .2s;
+  -moz-transition: opacity linear .2s;
+}
+a.next, a.next:link, a.next:visited {
+  margin-left:10px;
+  background-position: top right;
+}
+
+a.next:hover, a.next:active {
+  background-position: bottom right;
+  background-color: #021225;
+}
+
+a.prev, a.prev:link, a.prev:visited {
+  background-position: top left;
+  opacity:0;
+}
+
+a.prev:hover, a.prev:active {
+  background-position: bottom left;
+  background-color: #021225;
+}
+
+.list-of-games-container h2 .marker {
+  display:block;
+  padding-top:7px;
+  border-top:1px solid #102337;
+  border-left:1px solid #102337;
+  border-right:1px solid #102337;
+  margin-top:4px;
+}
+.game-list-container {
+  transition: all ease-in-out .3s;
+  -webkit-transition: all ease-in-out .3s;
+  -moz-transition: all ease-in-out .3s;
+}
+.game-list {
+  margin:10px 20px;
+}
+.game {
+  height: 60px;
+  width: 60px;
+  background: transparent no-repeat 50% 50%;
+  cursor:pointer;
+}
+.game p {
+  position:absolute;
+  background:rgba(0, 11, 15, 0.9);
+  border:1px solid rgba(53, 55, 56, 0.47);
+  box-shadow:inset 0px 0px 21px rgba(0,0,0,.75);
+  padding:10px 10px 10px 10px;
+  line-height:14px;
+  width:260px;
+  position:absolute;
+  height:65px;
+  border-radius:2px;
+  opacity:0;
+  z-index:11;
+  margin-top:-62px;
+  transition: all linear .5s;
+  -webkit-transition: all linear .5s;
+  -moz-transition: all linear .5s;
+}
+.game > p > span {
+  font-size:11px;
+  display:block;
+  padding-top:5px;
+}
+.game > p > span > strong {
+  color:#14a6f1;
+}
+.hale p, .lol p {
+  margin-left:-60px;
+}
+.cs p, .hots p {
+  margin-left:-120px;
+}
+.tf p, .mtg p {
+  margin-left:-180px;
+}
+.ow p, .hs p {
+  margin-left:-240px;
+}
+.game:hover p{
+  opacity:1;
+}
+
+.lok {
+  background-image:url("/images/lok.png");
+}
+tr.odd {
+  background-color: #010d19;
+}
+tr.even {
+  background-color: #02172e;
+}
+.completed {
+  background-color: #5cc301;
+}
+.in-progress {
+  background-color: #fcff00;
+}
+.tera {
+  background-image:url("/images/tera.png");
+}
+.eq {
+  background-image:url("/images/eq.png");
+  background-size: 50px 50px;
+}
+.ac {
+  background-image:url("/images/ac.png");
+  background-size: 45px 45px;
+}
+.daoc {
+  background-image:url("/images/daoc.png");
+  background-size: 50px 50px;
+}
+.wow {
+  background-image:url("/images/wow.png");
+  background-size: 50px 50px;
+}
+.gw {
+  background-image:url("/images/gw.png");
+  background-size: 50px 50px;
+}
+.gw2 {
+  background-image:url("/images/gw2.png");
+}
+.eso {
+  background-image:url("/images/eso.png");
+  background-size: 55px 55px;
+}
+.mtg {
+  background-image:url("/images/mtg.png");
+  background-size: 55px 55px;
+}
+.hs {
+  background-image:url("/images/hs.png");
+  background-size: 45px 45px;
+}
+.ow {
+  background-image:url("/images/ow.png");
+  background-size: 50px 50px;
+  background-position: 50% 3px;
+}
+.cs {
+  background-image:url("/images/cs.png");
+  background-size: 45px 45px;
+}
+.tf {
+  background-image:url("/images/tf.png");
+  background-size: 50px 50px;
+}
+.halo {
+  background-image:url("/images/halo.png");
+}
+.hots {
+  background-image:url("/images/hots.png");
+  background-size: 45px 45px;
+}
+.bt {
+  background-image:url("/images/bt.png");
+  background-size: 50px 53px;
+}
+.d3 {
+  background-image:url("/images/d3.png");
+  background-size: 65px 65px;
+  background-position:50% 5px;
+}
+.lol {
+  background-image:url("/images/lol.png");
+  background-size: 45px 45px;
 }
