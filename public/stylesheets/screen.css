@@ -358,7 +358,7 @@ span.type {
   color:#FFF;
   font-size:11px;
 }
-.talents_content, .resume_content {
+.talents_content, .resume_content, .portfolio_content {
   margin-left:320px;
   margin-top:180px;
 }
@@ -570,7 +570,7 @@ p.timespan {
 .fps-heading {
   width:291px;
 }
-.controls {
+.progression .controls {
   width:62px;
   height:30px;
   padding:28px 48px 26px 0;
@@ -759,4 +759,149 @@ tr.even {
 .lol {
   background-image:url("/images/lol.png");
   background-size: 45px 45px;
+}
+/*folio*/
+
+.portfolio, .code_samples {
+  position:absolute;
+  padding-top:10px;
+}
+.work-listed, .snippets-listed {
+  opacity:0;
+  transition: all linear .5s;
+  -webkit-transition: all linear .5s;
+  -moz-transition: all linear .5s;
+}
+
+.portfolio .active-panel, .code_samples .active-panel {
+  opacity: 1;
+  z-index:20; 
+} 
+.portfolio > h3 > a, .code_samples > h3 > a {
+  background:#010d19;
+  border-radius:6px;
+  color:#14a6f1;
+  float:left;
+  padding:10px;
+  border:1px solid #000;
+  opacity:.6;
+  margin-right:5px; 
+  z-index: 20;
+  position: relative;
+}
+
+.code_samples > h3 > a {
+  margin-left:105px;
+}
+.portfolio > h3 > a:hover, .code_samples > h3 > a:hover {
+  color:#fff;
+  opacity: .8;
+}
+.portfolio > h3 > a.current-tab, .code_samples > h3 > a.current-tab, .portfolio > h3 > a.current-tab:hover, .code_samples > h3 > a.current-tab:hover {
+  color:#74caf6;
+  opacity:1;
+  cursor: default;
+  font-weight: bold;
+}
+.portfolio h4, .code_samples h4 {
+  font-size:11px;
+  opacity:.4;
+  font-style: italic;
+  padding-top:10px;
+  display: inline;
+}
+
+.work-listed {
+  height:360px;
+  overflow:hidden;
+  width:680px;
+  position:relative;
+  clear:both;
+  padding-top:10px;
+}
+
+.work-listed .controls {
+  position: absolute;
+  right:10px;
+  margin-top:-10px;
+}
+.work-listed > ul {
+  width:2000px;
+  position:absolute;
+  transition: all ease-in-out .3s;
+  -webkit-transition: all ease-in-out .3s;
+  -moz-transition: all ease-in-out .3s;
+}
+
+.work {
+  background:url("/images/resume_content_bg.png") 50% -2px no-repeat;
+  width:220px;
+  float:left;
+  overflow:hidden;
+  margin-right:5px;
+  border-radius:6px;
+}
+.work > .heading {
+  padding:10px 0;
+  border-bottom:1px solid #061621;
+  margin:0 10px;
+}
+.work > .content {
+  border-top:1px solid #0e3451;
+  border-bottom:1px solid #061621;
+  padding:10px 0;
+  margin:0 10px;
+  height:240px;
+}
+.work > .info {
+  padding:10px 0;
+  margin:0 10px;
+  border-top:1px solid #0e3451;
+}
+.work a {
+  color:#74caf6;
+}
+.work img {
+  display:block;
+  width:80%;
+  margin:5px auto;
+  border:1px solid #092337;
+}
+.work-row {
+  clear:both;
+  padding-top:10px;
+}
+
+.snippets-listed {
+  margin-top:10px;
+  clear:both;
+  position:relative;
+  width:620px;
+  height:480px;
+  padding-top:10px;
+}
+.snippets-listed li {
+  width:565px;
+  height:201px;
+  padding:10px;
+  background:url("/images/resume_content_bg.png") 50% -2px no-repeat;
+  border-radius: 6px;
+  margin-top:10px;
+  margin-left:0;
+}
+pre {
+  font-size: 10px;
+  background:rgba(0,0,0,.3)!important;
+  border:1px solid #092337;
+  overflow: auto;
+  padding:10px 0;
+  overflow: auto;
+  height:160px;
+}
+.task {
+  font-size:11px;
+  padding-bottom: 10px;
+}
+.task strong {
+  font-weight: bold;
 }
