@@ -13,7 +13,7 @@
 <div class='container'>
   <header class='resume-header'>
     <h1 class='hidden'>Cher Stewart</h1>
-    <h2 class='hidden'>703.598.1152 - cher.stewart@gmail.com - 13516 Apple Barrel Ct, Herndon, VA 20171</h2>
+    <h2 class='hidden'>657.272.2878 - cher.stewart@gmail.com</h2>
   </header>
   <section id='sidebar'>
     <header>
@@ -295,7 +295,7 @@
               Gannett/USA Today
             </h2>
             <p class='location'>McLean, VA</p>
-            
+
 <h3>Senior Developer, Web &amp; Emerging Platforms</h3>
             <p class='timespan'>November 2011-Present</p>
             <ul>
@@ -463,7 +463,7 @@
                     <p class="work-done">Front-End Developer (solo)</p>
                   <div>
                 </li>
-              </div> 
+              </div>
             </ul>
           </div>
         </div>
@@ -486,21 +486,21 @@
 
                     this.$elOverlay = this.$el.find("."+ options.overlayType);
                     this.$overlay = this.$elOverlay.parent();
-                    this.$elOverlay.wrap("&lt;div class='overlay-wrap "+ options.overlayType+"-overlay-wrap "+ options.overlayColor+"-overlay-wrap' /&gt;");  
-                    this.$elOverlay.wrap("&lt;div class='overlay-container' />").before("&lt;div class='overlay-close-btn top close-"+options.overlayType+"'&gt;&lt;/div&gt;");  
+                    this.$elOverlay.wrap("&lt;div class='overlay-wrap "+ options.overlayType+"-overlay-wrap "+ options.overlayColor+"-overlay-wrap' /&gt;");
+                    this.$elOverlay.wrap("&lt;div class='overlay-container' />").before("&lt;div class='overlay-close-btn top close-"+options.overlayType+"'&gt;&lt;/div&gt;");
                     this.$overlayWrap = this.$overlay.find(".overlay-wrap");
 
                     this.$win = $(window);
                     this.$body = $('body');
                     this.$bodyHeight = this.$body.height();
-                    
+
                     this.$scrollTopHeight = parseInt($(this.$overlayWrap).css('padding-top'));
 
                     this.$menuEventType = (this.useTouch &amp;&amp; this.hasTouch) ? 'touchstart' : 'click';
 
                     this.$overlayWrap.on(this.$menuEventType, _.bind(this.outsideOverlayHandler, this));
                     this.$('.close-overlay-btn').on(this.$menuEventType, _.bind(this.toggleOverlay, this, false));
-                    
+
                     this.scrollShader();
 
                   },
@@ -524,7 +524,7 @@
 
                     _.delay(_.bind(function () {
                       height = this.getCalculatedHeight() + optionHeight + 100;
-                      
+
                       if ((scrollTop + height) &gt; bodyHeight) {
                         height = scrollTop + height;
                         this.$el.height(height + 100);
@@ -543,14 +543,14 @@
 
                     if ((isEvent &amp;&amp; $(option.target).hasClass('overlay-close-btn')) || (option == false)) {
                       this.$overlay.removeClass('active');
-                      if (this.$overlay.hasClass('active')) { 
-                        _this.destroy();                            
+                      if (this.$overlay.hasClass('active')) {
+                        _this.destroy();
                       }
                       $('body').css('height', '');
                     } else {
                       this.$overlay.addClass('active');
                       this.$overlay.appendTo('body');
-                      this.scrollShader();        
+                      this.scrollShader();
                     }
 
                     if (isEvent)
@@ -559,11 +559,11 @@
                     $('input').blur();
                   },
 
-                  outsideOverlayHandler: function(e) {      
+                  outsideOverlayHandler: function(e) {
                     if ($(e.target).hasClass('overlay-wrap')) {
                       this.toggleOverlay(false);
                       e.preventDefault();
-                    }           
+                    }
                   },
 
                   updateOverlay: function(contents) {
@@ -587,13 +587,13 @@
                 initialize: function() {
                   if ( window.location.pathname.indexOf("longform") > -1 ) {
                         this.views.storyChapters = new Share({ el: '.overlay', overlayType: 'chapters-expanded', overlayColor: 'dark' });
-                        
+
                         _.bindAll(this, '_chapteredStyle', '_hideHeader', '_jumpToChapter');
-                        
+
                         this._chapteredStyle();
                         this.chapterDivs = $('.chapter-marker');
                         this.$win = $(window);
-                          this.$win.scroll(this._hideHeader);         
+                          this.$win.scroll(this._hideHeader);
                       }
                       _toggleChapters: function(e) {
                         this.views.storyChapters.toggleOverlay();
@@ -631,7 +631,7 @@
                           $('.header').height('51px').css("overflow", "visible");
                           $('.chapter-nav').css("position", "inline");
                         }
-                        
+
                         _.each(this.chapterDivs, function(item) {
                           var c = $(item);
                           var d = parseInt($(c).offset().top, 10) - 250;
@@ -644,12 +644,12 @@
 
                       _jumpToChapter: function(e) {
                         e.preventDefault();
-                        
+
                         var i = $(e.target).data("id");
                         var t = $(e.target).html();
                         this.views.storyChapters.destroy();
                         document.getElementById(i).scrollIntoView();
-                        $(".current-chapter").html(t);    
+                        $(".current-chapter").html(t);
                       }
                 </pre>
               </li>
@@ -663,8 +663,8 @@
                   // snipped
                   googletag.pubads().addEventListener('slotRenderEnded', function(event) {
                       if ($(".ad-top").hasClass("ad-fullpage")) {
-                        _this.adReady(); 
-                      }             
+                        _this.adReady();
+                      }
                     });
 
                   // snipped
@@ -674,14 +674,14 @@
                         firstMargin = $(".first-margin"),
                         height = document.documentElement.clientHeight
                         ;
-                      
-                      $body.addClass("has-ad-fullpage"); 
+
+                      $body.addClass("has-ad-fullpage");
                       $(".ad-fullpage")
                         .append("&lt;a href='javascript:;' id='scroll-fullad'&gt;Scroll to Content&lt;/a&gt;")
                         .find("iframe")
                         .css("height", height + "px");
-                        ;       
-                      
+                        ;
+
                       nav.css('top', height);
                       firstMargin.css('margin-top', height);
 
@@ -735,8 +735,8 @@
                 </div>
                 <pre class="sh_javascript">
                   // snipped
-                  
-                  initiate_geolocation: function(e) {  
+
+                  initiate_geolocation: function(e) {
                     navigator.geolocation.getCurrentPosition(_.bind(this.handle_geolocation_query, this), _.bind(this.handle_geolocation_denied));
                   },
 
